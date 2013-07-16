@@ -3,9 +3,9 @@ var app = express.createServer(express.logger());
 var buff = new Buffer(256);
 
 app.get('/', function(request, response) {
-// buff = fs.readFileSync("index.html");
 
-response.send('hello'); // buff.toString());
+buff = fs.readFileSync("index.html");
+response.send(buff.toString());
 
  } );
 
